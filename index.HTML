@@ -3,44 +3,54 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Donald Trump</title>
+    <title>Speed Typer Game</title>
     <style>
         body {
-            background-color: #fdfd96; /* bright yellow */
-            color: #ff6347; /* bright tomato red */
+            background-color: #f0f8ff;
             font-family: Arial, sans-serif;
             text-align: center;
+            margin: 0;
+            padding: 0;
         }
-        h1 {
+        header {
+            background-color: #1e90ff;
+            color: white;
+            padding: 20px 0;
+        }
+        header h1 {
+            margin: 0;
             font-size: 3em;
-            color: #1e90ff; /* bright dodger blue */
         }
-        h2 {
-            font-size: 2em;
-            color: #ff4500; /* orange red */
+        #game-container {
+            margin: 20px auto;
+            width: 80%;
+            max-width: 800px;
         }
-        p {
-            font-size: 1.2em;
-            color: #32cd32; /* lime green */
-        }
-        a {
-            color: #8a2be2; /* blue violet */
-            text-decoration: none;
-            font-weight: bold;
-        }
-        a:hover {
-            color: #ff1493; /* deep pink */
-        }
-        .section {
-            background-color: #ffcccb; /* light red */
+        #quote {
+            font-size: 1.5em;
+            color: #2f4f4f;
+            background-color: #fdfd96;
             padding: 20px;
-            margin: 10px;
             border-radius: 10px;
+            margin-bottom: 20px;
+        }
+        input[type="text"] {
+            width: 100%;
+            padding: 10px;
+            font-size: 1.2em;
+            border: 2px solid #1e90ff;
+            border-radius: 5px;
+            box-sizing: border-box;
+        }
+        #stats {
+            margin-top: 20px;
+            font-size: 1.5em;
+            color: #ff4500;
         }
         footer {
-            background-color: #20b2aa; /* light sea green */
+            background-color: #1e90ff;
             color: white;
-            padding: 10px;
+            padding: 10px 0;
             position: fixed;
             width: 100%;
             bottom: 0;
@@ -49,28 +59,54 @@
 </head>
 <body>
 
-    <h1>Donald J. Trump</h1>
+    <header>
+        <h1>Speed Typer Game</h1>
+    </header>
 
-    <div class="section">
-        <h2>45th President of the United States</h2>
-        <p>Donald J. Trump served as the 45th President of the United States from 2017 to 2021. Known for his larger-than-life personality, he revolutionized American politics.</p>
+    <div id="game-container">
+        <div id="quote">Press start to begin the game!</div>
+        <input type="text" id="input-box" placeholder="Start typing here..." disabled>
+
+        <div id="stats">
+            <p id="time">Time: 0s</p>
+            <p id="wpm">WPM: 0</p>
+        </div>
+
+        <button id="start-button" onclick="startGame()">Start Game</button>
     </div>
-
-    <div class="section">
-        <h2>Businessman & Entrepreneur</h2>
-        <p>Before his presidency, Trump built a global business empire with interests in real estate, entertainment, and media.</p>
-    </div>
-
-    <div class="section">
-        <h2>Trump's Influence</h2>
-        <p>Love him or hate him, Donald Trump left a lasting impact on the political landscape of the U.S. and the world.</p>
-    </div>
-
-    <a href="https://www.donaldjtrump.com">Visit Donald Trump's Official Website</a>
 
     <footer>
-        <p>&copy; 2024 Trump Info Page</p>
+        <p>&copy; 2024 Speed Typer Game</p>
     </footer>
 
-</body>
-</html>
+    <script>
+        const quotes = [
+            "The quick brown fox jumps over the lazy dog.",
+            "NitroType is a fun typing game.",
+            "Typing fast takes practice and patience.",
+            "Consistency is key to success in typing."
+        ];
+
+        let currentQuote = '';
+        let startTime;
+        let interval;
+        let isPlaying = false;
+
+        const quoteElement = document.getElementById('quote');
+        const inputBox = document.getElementById('input-box');
+        const timeElement = document.getElementById('time');
+        const wpmElement = document.getElementById('wpm');
+
+        function getRandomQuote() {
+            return quotes[Math.floor(Math.random() * quotes.length)];
+        }
+
+        function startGame() {
+            if (isPlaying) return;
+            isPlaying = true;
+
+            currentQuote = getRandomQuote();
+            quoteElement.textContent = currentQuote;
+
+            inputBox.value = '';
+            inputBox.disabled = false;
