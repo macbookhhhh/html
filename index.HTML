@@ -1,157 +1,23 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Macaulys Portfolio</title>
-    <style>
-        /* General Styles */
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-        body {
-            font-family: 'Arial', sans-serif;
-            color: #fff;
-            background: linear-gradient(45deg, #2f80ed, #e52d27);
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-        }
-        .container {
-            width: 85%;
-            max-width: 1000px;
-            background: rgba(255, 255, 255, 0.1);
-            border-radius: 12px;
-            padding: 2rem;
-            box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
-        }
-        h1 {
-            text-align: center;
-            margin-bottom: 20px;
-            font-size: 2.5rem;
-            letter-spacing: 2px;
-            color: #ffd700;
-        }
+<html>
+    <head>
+        <title>Welcome to HTML lerson 1</title>
+        <body> 
+            <h1> The PAge </h1>
+            <h3> abot this webpage</h3>
 
-        /* Navigation Bar */
-        nav {
-            display: flex;
-            justify-content: center;
-            margin-bottom: 20px;
-        }
-        nav a {
-            text-decoration: none;
-            padding: 10px 20px;
-            margin: 0 10px;
-            background-color: rgba(255, 255, 255, 0.2);
-            border-radius: 8px;
-            transition: background-color 0.3s;
-            color: #fff;
-        }
-        nav a:hover {
-            background-color: rgba(255, 255, 255, 0.4);
-        }
-
-        /* Section Styles */
-        section {
-            display: none;
-        }
-        section.active {
-            display: block;
-        }
-        .content h2 {
-            margin-bottom: 20px;
-            font-size: 2rem;
-        }
-        .content p {
-            line-height: 1.6;
-        }
-        .content .projects {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 20px;
-        }
-        .content .projects .project-card {
-            background-color: rgba(255, 255, 255, 0.2);
-            padding: 20px;
-            border-radius: 10px;
-            text-align: center;
-        }
-
-        /* Footer */
-        footer {
-            text-align: center;
-            margin-top: 40px;
-        }
-    </style>
-</head>
-<body>
-    <div class="container">
-        <h1>Coding Portfolio</h1>
-        
-        <nav>
-            <a href="#about" class="nav-link">About Me</a>
-            <a href="#projects" class="nav-link">Projects</a>
-            <a href="#contact" class="nav-link">Contact</a>
-        </nav>
-
-        <section id="about" class="active">
-            <div class="content">
-                <h2>About Me</h2>
-                <p>I'm a passionate coder and game developer working with the Godot Engine. I love to create innovative projects and solve complex problems with code.</p>
-            </div>
-        </section>
-
-        <section id="projects">
-            <div class="content">
-                <h2>My Projects</h2>
-                <div class="projects">
-                    <div class="project-card">
-                        <h3>Project 1</h3>
-                        <p>Project 1 description goes here.</p>
-                    </div>
-                    <div class="project-card">
-                        <h3>Project 2</h3>
-                        <p>Project 2 description goes here.</p>
-                    </div>
-                    <div class="project-card">
-                        <h3>Project 3</h3>
-                        <p>Project 3 description goes here.</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section id="contact">
-            <div class="content">
-                <h2>Contact Me</h2>
-                <p>Feel free to reach out via <a href="mailto:youremail@example.com" style="color: #ffd700;">email</a>.</p>
-            </div>
-        </section>
-        
-        <footer>
-            <p>&copy; 2024 My Portfolio</p>
-        </footer>
-    </div>
-
-    <script>
-        // Navigation Functionality
-        const navLinks = document.querySelectorAll('.nav-link');
-        const sections = document.querySelectorAll('section');
-
-        navLinks.forEach(link => {
-            link.addEventListener('click', function(event) {
-                event.preventDefault();
-                navLinks.forEach(nav => nav.classList.remove('active'));
-                link.classList.add('active');
-                
-                sections.forEach(section => section.classList.remove('active'));
-                document.querySelector(link.getAttribute('href')).classList.add('active');
-            });
-        });
-    </script>
-</body>
+            <p> this page repricent the use of various HTML tages </p>
+            <strong><p1> this sentance is wroten in bold to emphasize the empotant information</p1></strong>
+            <em><p2>this sentance is italicized to show emphasize in a different way</p2></em>
+            <small><p3>this text is slightly smaller </p3></small>
+            <br>
+            <h3>:my Hobbiies</h3>
+            <p4> here are things l ilke to do in my free time</p4>
+            <li>
+                reading books
+                Coding
+                esxploing nature
+            </li>
+        </body> 
+    </head>
 </html>
