@@ -1,72 +1,77 @@
 <!DOCTYPE html>
-<html>
-    <head>
-        <title>Welcome to my about page</title>
-        <body> 
-            <h1> Page </h1>
-            <h2> about this webpage</h2>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Digital Portfolio</title>
+    <link rel="stylesheet" href="styles.css"> <!-- Link to your CSS file -->
+</head>
+<body>
+    <header>
+        <h1>Your Name</h1>
+        <p>Web Developer | Designer | [Your Profession]</p>
+        <nav>
+            <ul>
+                <li><a href="#about">About</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
 
-            <p1> this page represents Various uses of HTML tags </p1>
-            <br>
-            <strong><p2> this sentance is wroten in bold to emphasize the empotant information</p2></strong>
-            <br>
-            <em><p3>this sentance is italicized to show emphasis in a different way</p3></em>
-            <br>
-            <small><p4>This Text is Slightly Smaller </p4></small>
+    <section id="about">
+        <h2>About Me</h2>
+        <p>Welcome to my digital portfolio! I am [Your Name], a [brief description about yourself, your background, and your passions].</p>
+    </section>
 
-            <hr>
+    <section id="projects">
+        <h2>Projects</h2>
+        <div class="project">
+            <h3>Project Title 1</h3>
+            <p>Description of the project. Include technologies used, the purpose of the project, and your role.</p>
+            <a href="https://link-to-your-project.com" target="_blank">View Project</a>
+        </div>
+        <div class="project">
+            <h3>Project Title 2</h3>
+            <p>Description of the project. Include technologies used, the purpose of the project, and your role.</p>
+            <a href="https://link-to-your-project.com" target="_blank">View Project</a>
+        </div>
+        <!-- Add more projects as needed -->
+    </section>
 
-            <h3>My Hobbiies</h3>
-            <p5> here are things l ilke to do in my free time</p5>
-            <li>
-                reading books
-            </li>
-            <li>
-                Coding
-                </li>
-                <li>
-                Exploring Nature
-            </li>
-      
-<h3>Steps to Create simple website</h3>
-<ol>
-<li>
-    Learn Basic HTML
-</li>
-<li>
-    Setup a development enviroment in VSC
-</li>
-<li>
-    Write and test HTML code
-</li>
-<li>
-    Preview your webpage
-</li>
-</ol>
+    <section id="skills">
+        <h2>Skills</h2>
+        <ul>
+            <li>HTML</li>
+            <li>CSS</li>
+            <li>JavaScript</li>
+            <li>React</li>
+            <li>Node.js</li>
+            <!-- Add more skills as needed -->
+        </ul>
+    </section>
 
-<hr>
+    <section id="contact">
+        <h2>Contact Me</h2>
+        <p>If you'd like to get in touch, feel free to reach out!</p>
+        <form action="mailto:your-email@example.com" method="get" enctype="text/plain">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+            <label for="message">Message:</label>
+            <textarea id="message" name="message" required></textarea>
+            <button type="submit">Send</button>
+        </form>
+    </section>
 
-<strong></strong><h4> Explore more</h4></strong>
-<p4>Visit <a href="https://everestacademy.s3.amazonaws.com/uploads/case_studies/6_20_l.png?t=1727774883">Website</a> to view stuff</p4>
-
-<br>
-
-<img>
-<img src="https://everestacademy.s3.amazonaws.com/uploads/case_studies/6_20_l.png?t=1727774883" alt="Johnny johnny">
-
-<strong><h4>Fun Fact</h4></strong>
-<p6>Did you know HTML stands for HyperText Makup Language</p6>
-    <p7>" The World Wide Web Consortium (W3C) is an international is a community where a Member organizations, a full-time staff and the public work togther to develop web standards" - WJC</p7>
-<br>
-<font color="Blue">  
-<p8> This texted is colored blue via Css </p8>
-</font>
-<br>
-    <p9>The word <font color="Red">HTML</font> is colored in red to stand out</p9>
-
-    
-    <br>
-    <samll><p9>Thank you</p9></samll>
-        </body> 
-    </head>
+    <footer>
+        <p>&copy; 2024 Your Name. All rights reserved.</p>
+        <p>Follow me on 
+            <a href="https://linkedin.com/in/yourprofile" target="_blank">LinkedIn</a> | 
+            <a href="https://github.com/yourprofile" target="_blank">GitHub</a>
+        </p>
+    </footer>
+</body>
 </html>
